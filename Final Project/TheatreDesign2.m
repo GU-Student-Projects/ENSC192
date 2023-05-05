@@ -25,7 +25,6 @@ firstRow = 0;
 seatSize = 23 / 12;
 rowSpacing = 42 / 12;
 stageRise = 4.5;
-stageUp = 29.27;
 aisleSize = 4;
 stageUpPerSeat = 40 / 30;
 
@@ -75,6 +74,8 @@ end
 heatmap(decib)
 
 % Calculate money gained
-moneyGained = (tier3 * 20) + (tier2 * 45) + (tier1 * 80) + (firstRow * 100);
-fprintf("The money gained from this theatre per showing is %0.0d. \n", moneyGained);
+moneyGained = ((tier3 * 20) + (tier2 * 45) + (tier1 * 80) + (firstRow * 100))*(0.94*0.88);
+yearlyReavenue = (moneyGained*90) - (moneyGained * 90)*0.8;
+fprintf("The money gained from this theatre per showing is $%0.0f. \n", moneyGained);
+fprintf("The money earned per year is $%0.0f. \n", yearlyReavenue);
 %------------- END OF CODE --------------
